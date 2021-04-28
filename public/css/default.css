@@ -1,0 +1,73 @@
+:root {
+    --cp: #0376FB;/*color principal, menu, botones, enlaces, negritas*/
+    --c1: #ffffff;/*color formularios, body, letra de botones*/
+    --c2: linear-gradient(315deg, #ffffff, #e6e6e6);
+    --c3:#646262;/*color de textos y marcos*/
+    --b: 10px;     /*medida de bordes de esquinas*/
+    --bsi:  -20px -20px 60px #d9d9d9, 20px 20px 60px #ffffff;
+    --bse: -20px -20px 60px #d9d9d9, 20px 20px 60px #ffffff;
+    --ts: 0.3s;
+ }
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI',  'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--c3);
+    background-color: var(--c1);
+    white-space: initial;
+    word-wrap:break-word
+}
+a, b{
+    color: var(--cp);
+    text-decoration: none;  
+}
+.arFormularios{
+    margin: 0 auto;
+    padding: 2%;
+    width: 50%;
+    border-radius: var(--b);
+    background-color: var(--c1);
+    box-shadow: var(--bse);
+    transition: var(--ts);
+}
+
+.arFormularios input{
+    height: 30px;
+    transition: var(--ts);
+    outline:none;
+    border-radius: var(--b);
+    border: 0;
+}
+
+.arFormularios input:not(.asBotones input){
+    background-color: var(--c2);
+    box-shadow: var(--bsi);
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 2% 0 2%;
+}
+.arFormularios .asBotones{
+    display:grid;
+    width: 98%;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-gap: 10%;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 0 auto;
+    text-align: center;
+}
+.arFormularios .asBotones input{
+    background-color: var(--cp);
+    cursor: pointer;
+    width: 100%;
+    color: var(--c1);;
+}
+.arFormularios .asBotones input:hover{
+   opacity: 0.8;
+   transition: var(--ts);
+   font-size: medium;
+}
+.arFormularios .asBotones a:hover{
+text-decoration: underline;
+}
